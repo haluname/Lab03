@@ -1,4 +1,6 @@
 from deposito_strumenti import DepositoStrumenti
+from prestito import Prestito
+from strumento import Strumento
 from datetime import datetime
 
 def menu():
@@ -20,7 +22,8 @@ def main():
 
         if scelta == "1":
             nuovo_responsabile = input("Inserisci il nuovo responsabile: ")
-            # TODO: Aggiorna responsabile nel sistema
+            deposito.responsabile = nuovo_responsabile
+            print(f"Responsabile aggiornato a: {deposito.responsabile}")
 
         elif scelta == "2":
             while True:
